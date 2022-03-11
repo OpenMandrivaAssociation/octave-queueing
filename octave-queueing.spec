@@ -1,16 +1,18 @@
-%define octpkg queueing
+%global octpkg queueing
 
 Summary:	Functions for queueing networks and Markov chains analysis with Octave
 Name:		octave-%{octpkg}
-Version:	1.2.5
+Version:	1.2.7
 Release:	1
 Source0:	http://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
+# https://savannah.gnu.org/bugs/index.php?48959
+Patch0:		doc-Makefile.patch
 License:	GPLv3+
 Group:		Sciences/Mathematics
 Url:		https://octave.sourceforge.io/%{octpkg}/
 BuildArch:	noarch
 
-BuildRequires:	octave-devel >= 3.8.1
+BuildRequires:	octave-devel >= 4.0.0
 
 Requires:	octave(api) = %{octave_api}
 
@@ -30,14 +32,28 @@ are supported.
 
 This package is part of community Octave-Forge collection.
 
+%files
+%license COPYING
+%doc NEWS
+%dir %{octpkgdir}
+%{octpkgdir}/*
+
+#---------------------------------------------------------------------------
+
 %prep
-%setup -qcT
+%autosetup -p1 -n %{octpkg}
+
+# remove backup files
+#find . -name \*~ -delete
 
 %build
-%octave_pkg_build -T
+%octave_pkg_build
 
 %install
 %octave_pkg_install
+
+%check
+%octave_pkg_check
 
 %post
 %octave_cmd pkg rebuild
@@ -47,10 +63,4 @@ This package is part of community Octave-Forge collection.
 
 %postun
 %octave_cmd pkg rebuild
-
-%files
-%dir %{octpkgdir}
-%{octpkgdir}/*
-%doc %{octpkg}/NEWS
-%doc %{octpkg}/COPYING
 
