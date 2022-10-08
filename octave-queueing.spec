@@ -4,7 +4,7 @@ Summary:	Functions for queueing networks and Markov chains analysis with Octave
 Name:		octave-%{octpkg}
 Version:	1.2.7
 Release:	1
-Source0:	http://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
+Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
 # https://savannah.gnu.org/bugs/index.php?48959
 Patch0:		doc-Makefile.patch
 License:	GPLv3+
