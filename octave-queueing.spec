@@ -9,7 +9,7 @@ Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
 Patch0:		doc-Makefile.patch
 License:	GPLv3+
 Group:		Sciences/Mathematics
-Url:		https://octave.sourceforge.io/%{octpkg}/
+Url:		https://packages.octave.org/%{octpkg}/
 BuildArch:	noarch
 
 BuildRequires:	octave-devel >= 4.0.0
@@ -29,8 +29,6 @@ steady-state performance measures for Markov chains can be computed, such
 as state occupancy probabilities, mean time to absorption, time-averaged
 sojourn times and so forth. Discrete- and continuous-time Markov chains
 are supported.
-
-This package is part of community Octave-Forge collection.
 
 %files
 %license COPYING
