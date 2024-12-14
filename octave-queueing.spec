@@ -7,7 +7,7 @@ Release:	1
 License:	GPLv3+
 Group:		Sciences/Mathematics
 Url:		https://packages.octave.org/queueing/
-Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
+Source0:	https://github.com/mmarzolla/queueing/releases/download/%{version}/%{octpkg}-%{version}.tar.gz
 # https://savannah.gnu.org/bugs/index.php?48959
 Patch0:		doc-Makefile.patch
 
