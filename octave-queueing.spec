@@ -3,7 +3,7 @@
 Summary:	Functions for queueing networks and Markov chains analysis with Octave
 Name:		octave-queueing
 Version:	1.2.8
-Release:	1
+Release:	2
 License:	GPLv3+
 Group:		Sciences/Mathematics
 Url:		https://packages.octave.org/queueing/
